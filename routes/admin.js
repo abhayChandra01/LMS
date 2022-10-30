@@ -3,6 +3,8 @@ var router = express.Router();
 var pool=require('./pool')
 var upload=require('./multer')
 
+//TESTING
+
     router.post('/checkadminlogin',function(req, res, next) {
 
         pool.query("select * from administrator where emailid=? and password=?",[req.body.emailid,req.body.password],function(error,result){
